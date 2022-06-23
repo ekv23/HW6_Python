@@ -12,7 +12,7 @@ print('введите k - степень многочлена: ')
 pow = int(input()) 
 list_of_coeffs = [randint(0, 100) for i in range(pow+1)] 
 
-def create_polynom(list, k):
+def create (list, k):
 
     polynom = [str(list[i]) + '*x^' + str(k-i) for i in range(k-1) if list[i] != 0]
 
@@ -22,10 +22,10 @@ def create_polynom(list, k):
         polynom.append(str(list[k])) 
     return polynom
 
-result = ' + '.join(create_polynom(list_of_coeffs, pow))  + ' = 0'
+result = ' + '.join(create(list_of_coeffs, pow))  + ' = 0'
 str = result.replace('1*x', 'x')
 
 print(str)
 
-with open('file33.txt', 'w') as data:
+with open('/Users/ekaterina/Desktop/Desktop/Python/lesson6/file33.txt', 'w') as data:
     data.write(str)
