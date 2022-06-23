@@ -27,5 +27,5 @@ str = result.replace('1*x', 'x')
 
 print(str)
 
-with open('polynom.txt', 'w') as data:
+with open('file33.txt', 'w') as data:
     data.write(str)
